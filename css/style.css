@@ -1,0 +1,832 @@
+:root {
+    --color-primario: #00a0c0;
+    --color-primario-oscuro: #004F81;
+    --color-secundario: #0083c5;
+}
+
+html {
+    font-size: 16px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+.br-100 {
+    border-radius: 100%;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn {
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+
+/******** HEADER **********/
+
+header {
+    height: 80px;
+    position: sticky;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+.headercolor {
+    background-color: white;
+    box-shadow: 0 1px 8px rgb(25 25 25 / 45%);
+}
+
+.headercolor .a-link {
+    color: var(--color-primario-oscuro);
+}
+
+.logo-img {
+    height: 60px;
+    padding: 15px 0;
+}
+
+.logo-img img {
+    height: 100%;
+    object-fit: contain;
+}
+
+.navbar-toggler {
+    border-color: var(--color-primario-oscuro) !important;
+}
+
+.a-link {
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 0.5rem;
+}
+
+.link-active {
+    color: var(--color-primario) !important;
+}
+
+.a-link:hover {
+    color: var(--color-primario);
+}
+
+
+/******** SWIPER GENERAL *******/
+
+.swiper-button-prev,
+.swiper-button-next {
+    --swiper-theme-color: var(--color-primario);
+    width: 50px;
+    height: 50px;
+    padding: 25px;
+    border-radius: 100%;
+    background-color: rgba(0, 0, 0, 0.123);
+    font-weight: bold;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    background-color: rgba(0, 0, 0, 0.548);
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: 25px;
+}
+
+.swiper-button-prev {
+    left: 70px;
+}
+
+.swiper-button-next {
+    right: 70px;
+}
+
+
+/********* MASK ********/
+
+#mask-container {
+    height: 112vh;
+    min-height: 545px;
+    max-height: 850px;
+    position: relative;
+    margin-top: -80px;
+}
+
+#mask-swiper-container {
+    height: 100%;
+}
+
+.mask-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    clip-path: polygon(0 0, 0 92%, 50% 100%, 100% 92%, 100% 0);
+    ;
+}
+
+#mask-info {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    height: fit-content;
+    width: 45%;
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    color: white;
+}
+
+#mask-info span {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+#mask-info h1 {
+    font-size: 3.5rem;
+    color: var(--color-primario);
+    font-weight: bold;
+}
+
+#mask-info p {
+    padding: 5px 40px;
+}
+
+.button-mask-div {
+    margin-top: 20px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn-mask {
+    font-size: 0.9rem;
+    padding: 15px 45px;
+    color: white;
+}
+
+.btn-shop {
+    background-color: var(--color-primario);
+    transition: all 0.4s;
+}
+
+.btn-shop:hover {
+    background-color: var(--color-primario-oscuro);
+    color: white;
+    box-shadow: 1px 1px 4px var(--color-primario);
+}
+
+
+/******** INFO LIMAUTOS ********/
+
+#info-limautos-content {
+    padding: 60px 10px;
+}
+
+#limautos-img {
+    width: 100%;
+    margin: auto;
+    height: 100%;
+    padding: 0 20px 20px 40px;
+    position: relative;
+}
+
+#limautos-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#limautos-img-add {
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    background-color: var(--color-secundario);
+    color: white;
+    padding: 20px;
+    clip-path: polygon(10% 0, 90% 1%, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0 90%, 0 10%);
+}
+
+#info-add {
+    padding-left: 18px;
+    padding-top: 10px;
+    padding-right: 10px;
+    border-left: 3px solid white;
+    border-top: 3px solid white;
+}
+
+.info-add-text {
+    font-size: 1.3rem;
+    margin-bottom: 0px;
+    display: block;
+}
+
+.info-add-number {
+    font-size: 4.8rem;
+    margin-bottom: 0px;
+    display: block;
+    line-height: 4.7rem;
+    font-weight: bold;
+}
+
+#info-limautos {
+    padding: 0 25px;
+}
+
+#info-limautos span {
+    font-size: 1rem;
+    color: var(--color-primario);
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+#info-limautos h1 {
+    font-size: 3.2rem;
+    margin-top: 1px;
+    color: #0e0e0e;
+    font-weight: bold;
+}
+
+#info-limautos p {
+    margin-top: 20px;
+    color: #242424;
+    font-size: 1rem;
+}
+
+.div-button-info {
+    margin-top: 30px;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: start;
+}
+
+.btn-leer {
+    font-size: 0.9rem;
+    padding: 15px 45px;
+    border: 2.5px solid var(--color-primario);
+    color: #0e0e0e;
+    transition: all 0.4s;
+}
+
+.btn-leer:hover {
+    background-color: var(--color-primario-oscuro);
+    border: 2.5px solid var(--color-primario-oscuro);
+    color: white;
+    box-shadow: 1px 1px 5px var(--color-primario);
+}
+
+
+/*********** MARCAS **************/
+
+#marcas-div {
+    background-image: url(../assets/img/fondo-marcas.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#marcas-container {
+    display: flex;
+    justify-content: space-around;
+    background-color: #0083c598;
+}
+
+.marca {
+    min-height: 350px;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+}
+
+.marca-img-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.marca-img {
+    width: 80px;
+    height: 80px;
+}
+
+.marca-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.marca-add {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.marca:hover .marca-add {
+    display: block;
+}
+
+.conocer-mas {
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 0.9rem;
+    margin-top: 8px;
+}
+
+.marca-add-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.marca-add-content {
+    position: absolute;
+    width: 100%;
+    height: 68px;
+    bottom: 0;
+    padding: 10px 0;
+    background-image: url(../assets/img/gradient.png);
+    background-position: center;
+    background-size: contain;
+}
+
+.line-add {
+    width: 30%;
+    border-top: 2px solid white;
+    margin: auto;
+}
+
+#kia-add,
+#chery-add,
+#mg-add,
+#mitsubishi-add,
+#peugeot-add {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#kia-add {
+    background-image: url(../assets/img/marcas/kiaAdd.jpg);
+}
+
+#chery-add {
+    background-image: url(../assets/img/marcas/cherysAdd.jpg);
+}
+
+#mg-add {
+    background-image: url(../assets/img/marcas/mgAdd.jpg);
+}
+
+#mitsubishi-add {
+    background-image: url(../assets/img/marcas/mitsubishiAdd.jpg);
+}
+
+#peugeot-add {
+    background-image: url(../assets/img/marcas/peugeotAdd.jpg);
+}
+
+
+/********** SERVICIO **********/
+
+#servicio-div {
+    padding: 5px 0;
+}
+
+#servicio-container {
+    margin: 80px auto;
+}
+
+.servicio-titulo {
+    font-weight: bold;
+}
+
+#servicio-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.servicio {
+    width: 31%;
+    height: 310px;
+    min-width: 280px;
+    background-color: #00a0c0;
+    position: relative;
+    margin: 10px;
+}
+
+.servicio img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.sevicio-info {
+    position: absolute;
+    width: 100%;
+    background-color: #000000cb;
+    bottom: 0;
+    left: 0;
+    padding: 15px 15px;
+    color: white;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    clip-path: polygon(0 0, 72% 0, 100% 100%, 0% 100%);
+}
+
+.sevicio-info h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.sevicio-info span {
+    font-size: 0.85rem;
+}
+
+.button-servicio-div {
+    padding: 5px 0;
+    margin-top: 10px;
+}
+
+.btn-servicio {
+    color: white;
+    background-color: var(--color-primario);
+    font-size: 0.85rem;
+    border-radius: 15px;
+    padding: 7px 20px;
+    transition: all 0.5s;
+}
+
+.btn-servicio:hover {
+    color: white;
+    background-color: var(--color-primario-oscuro);
+}
+
+
+/**** CONTACT ME ***/
+
+#contact-div {
+    background-image: url(../assets/img/fondo-contacto.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#contact-container {
+    background-color: rgba(255, 255, 255, 0.404);
+}
+
+#contact-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+}
+
+#contact-info {
+    width: 50%;
+    margin: 30px auto;
+    color: white;
+}
+
+#contact-info h1 {
+    color: var(--color-primario);
+    font-size: 3.2rem;
+    font-weight: bold;
+}
+
+#contact-info p {
+    margin-top: 25px;
+    font-weight: 500;
+    color: #000000;
+}
+
+#contact-info span {
+    display: block;
+    text-align: center;
+}
+
+.contact-call {
+    color: #000000;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.contact-number {
+    color: var(--color-primario-oscuro);
+    font-size: 3rem;
+    font-weight: 600;
+    margin: 15px 0;
+}
+
+#btn-ayuda-content {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.btn-ayuda {
+    background-color: var(--color-primario);
+    color: white;
+    font-weight: bold;
+    padding: 15px 45px;
+    transition: all 0.5s;
+}
+
+.btn-ayuda:hover {
+    background-color: var(--color-primario-oscuro);
+    color: white;
+    box-shadow: 0 3px 8px rgb(25 25 25 / 45%);
+}
+
+
+/********** FOOTER **********/
+
+footer {
+    background-color: #111111;
+    padding: 20px 0 5px 0;
+}
+
+#footer-menu {
+    padding: 50px 10px;
+}
+
+#logo-footer {
+    width: 150px;
+}
+
+#logo-footer img {
+    width: 100%;
+    object-fit: cover;
+}
+
+#footer-menu h1 {
+    font-size: 1.02rem;
+    color: #FFFFFF;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.footer-list-menu {
+    padding-left: 8px;
+    margin-top: 10px;
+}
+
+.footer-list-menu li {
+    margin-top: 12px;
+}
+
+.footer-list-menu,
+.footer-list-menu li a {
+    color: #dde1eb;
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.92rem;
+}
+
+.footer-list-menu li a:hover {
+    color: var(--color-primario) !important;
+}
+
+#footer-li-social {
+    margin-top: 18px;
+}
+
+#footer-li-social a {
+    margin-right: 20px;
+    font-size: 1rem;
+}
+
+.footer-contacto li i {
+    color: var(--color-primario);
+}
+
+#footer-copy {
+    border-top: 1px solid rgb(133, 133, 133);
+}
+
+#footer-copy h1 {
+    font-size: 0.95rem;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+
+#footer-copy h1,
+#footer-copy h1 a {
+    color: var(--color-primario);
+}
+
+#footer-copy h1 a:hover {
+    color: white;
+}
+
+@media (max-width:991px) {
+    /******** HEADER ********/
+    #header {
+        padding: 0;
+    }
+    header,
+    .navbar {
+        background-color: white;
+        box-shadow: 0 1px 8px rgb(25 25 25 / 45%);
+    }
+    .navbar {
+        padding: 15px 10px;
+    }
+    .logo-img {
+        display: block;
+    }
+    .navbar-nav {
+        padding-left: 0;
+        margin: 20px 0;
+    }
+    .navbar-nav li {
+        display: inline-block;
+        text-align: center;
+        margin: 15px 0;
+    }
+    .a-link {
+        justify-content: center;
+        font-size: 1.1rem;
+        padding-left: 0;
+        padding-right: 0;
+        color: var(--color-primario-oscuro);
+    }
+    /******** SWIPPER *********/
+    .swiper-button-prev {
+        left: 5px;
+    }
+    .swiper-button-next {
+        right: 5px;
+    }
+    /******* MASK *******/
+    #mask-container {
+        height: calc(100vh - 80px);
+        min-height: 400px;
+        max-height: 520px;
+        margin-top: 0px;
+    }
+    .mask-img {
+        object-position: center;
+    }
+    #mask-info {
+        width: 74%;
+        max-width: 500px;
+    }
+    #mask-info span {
+        font-size: 1rem;
+    }
+    #mask-info h1 {
+        font-size: 2.6rem;
+    }
+    #mask-info p {
+        padding: 5px 20px;
+    }
+    .button-mask-div {
+        padding: 10px 0;
+    }
+    .btn-mask {
+        padding: 15px 25px;
+    }
+    /*********** INFO LIMAUTOS ***************/
+    #info-limautos-content {
+        padding: 50px 0 20px 0;
+    }
+    #limautos-img {
+        padding: 0 10px 0px 25px;
+    }
+    #limautos-img-add {
+        bottom: -20px;
+        padding: 12px;
+    }
+    #info-add {
+        padding-left: 13px;
+        padding-top: 8px;
+        padding-right: 8px
+    }
+    .info-add-text {
+        font-size: 1rem;
+    }
+    .info-add-number {
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+    }
+    #info-limautos {
+        margin-top: 38px;
+    }
+    #info-limautos h1 {
+        font-size: 2.5rem;
+    }
+    /********** MARCAS ***********/
+    #marcas-div {
+        background-image: url(../assets/img/fondo-marcas-movil.jpg);
+    }
+    .marca-img-content {
+        width: 50%;
+    }
+    .marca-add {
+        display: block;
+        position: relative;
+        width: 50%;
+    }
+    #kia-add {
+        background-image: url(../assets/img/marcas/kiaAdd-movil.jpg);
+    }
+    #chery-add {
+        background-image: url(../assets/img/marcas/cherysAdd-movil.jpg);
+    }
+    #mg-add {
+        background-image: url(../assets/img/marcas/mgAdd-movil.jpg);
+    }
+    #mitsubishi-add {
+        background-image: url(../assets/img/marcas/mitsubishiAdd-movil.jpg);
+    }
+    #peugeot-add {
+        background-image: url(../assets/img/marcas/peugeotAdd-movil.jpg);
+    }
+    /******** SERVICIO **********/
+    #servicio-container {
+        margin: 50px auto;
+    }
+    #servicio-content {
+        justify-content: space-around;
+        margin-top: 10px;
+    }
+    .servicio {
+        width: 45%;
+        margin: 10px;
+    }
+    .sevicio-info {
+        clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 57%, 72% 0);
+    }
+    /************ CONTACT ME **************/
+    #contact-div {
+        background-image: url(../assets/img/fondo-contacto-movil.jpg);
+    }
+    #contact-info {
+        width: 85%;
+    }
+    #contact-info h1 {
+        font-size: 2.8rem;
+    }
+    .contact-call {
+        font-size: 1.7rem;
+    }
+    .contact-number {
+        font-size: 2.5rem;
+    }
+    /******* FOOTER *******/
+    #footer-menu h1 {
+        font-size: 1.12rem;
+        margin-top: 10px;
+    }
+    .footer-list-menu li {
+        font-size: 1rem;
+    }
+    #footer-copy h1 {
+        font-size: 0.7rem;
+    }
+}
+
+
+/***** animation ******/
+
+.opacity-div {
+    animation: opacity-div 0.7s ease both;
+}
+
+@keyframes opacity-div {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
